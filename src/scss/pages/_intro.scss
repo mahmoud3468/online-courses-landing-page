@@ -1,0 +1,119 @@
+@use "../custom" as *;
+
+.intro {
+  min-height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(../images/intro-bg-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $white;
+
+  &__content {
+    transform: translateY(-3rem);
+    h1 {
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+
+    p {
+      font-family: $font-family-sans-serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      max-width: 42rem;
+      line-height: 1.3;
+      margin: 0 auto;
+    }
+
+    &-form {
+      max-width: 35rem;
+      margin: 0 auto;
+
+      input {
+        padding: 1rem;
+      }
+
+      button {
+        height: 80%;
+        position: absolute !important;
+        right: 0;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 100 !important;
+        border-radius: 1px;
+      }
+    }
+  }
+
+  &__extra {
+    width: 65%;
+    position: absolute;
+    bottom: -3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 2rem;
+    background-color: $white;
+    color: $black;
+    border-radius: 1rem;
+    text-align: left;
+
+    @include media-breakpoint-down(xl) {
+      width: 80%;
+      bottom: -8%;
+    }
+
+    &-left {
+      padding-right: 3rem;
+      border-right: 0.5px solid rgb(165, 165, 165);
+    }
+
+    &-right {
+      padding-left: 3rem;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      color: $gray-900;
+    }
+
+    p {
+      font-family: $font-family-sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #747474;
+      line-height: 1.4;
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      i {
+        width: 3.5rem;
+        font-size: 2rem;
+        color: $gray-900;
+      }
+
+      h4 {
+        font-weight: 600;
+        font-size: 1.05;
+        color: $gray-900;
+        margin: 0;
+      }
+
+      span {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: $gray-900;
+      }
+    }
+  }
+}

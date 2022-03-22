@@ -1,0 +1,63 @@
+@use '../custom' as *;
+
+.navbar {
+  padding: 0.7rem 0;
+  background-color: $white;
+
+  &-brand {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  .navbar-toggler {
+    padding: 0.7rem;
+
+    &:focus {
+      box-shadow: unset;
+    }
+
+    // Hide/Show the burger icons
+    &[aria-expanded="false"] .fa-x {
+      display: none;
+    }
+
+    &[aria-expanded="true"] .fa-bars {
+      display: none;
+    }
+  }
+
+  .nav-item {
+    .nav-link {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $gray-900;
+      text-transform: capitalize;
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+      color: $primary;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    & {
+      padding: 0.5rem 0;
+    }
+
+    &-nav {
+      min-height: 92vh;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: $white;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 70%;
+    }
+  }
+}

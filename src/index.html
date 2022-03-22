@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Site description for SEO -->
+    <meta
+      name="description"
+      content="Online Courses site made with Bootstrap 5"
+    />
+
+    <!-- Favicon Here -->
+    <link rel="icon" href="#" />
+
+    <!-- CUSTOM LINKS -->
+    <link rel="stylesheet" href="./scss/fontawesome.scss" />
+    <link rel="stylesheet" href="./scss/main.scss" />
+
+    <title>Coursera Lite</title>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          >Coursera <small class="text-muted">lite</small></a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav-menu"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-x"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-menu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Teachers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+
+            <div class="nav-buttons ms-lg-2">
+              <a class="btn btn-outline-primary" role="button">Sign up</a>
+              <a class="btn btn-primary" role="button">Login</a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <main>
+      <!-- Intro Start -->
+      <section id="intro" class="intro text-center">
+        <div class="container">
+          <div class="intro__content">
+            <h1 class="display-2">learn without limits</h1>
+            <p class="lead mb-4">
+              Build skills with courses, certificates, and degrees online from
+              world-class universities and companies
+            </p>
+
+            <form action="#" class="intro__content-form">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search Courses"
+                  aria-label="search term"
+                  required
+                />
+                <button class="btn btn-primary" type="submit">
+                  <i class="fa-solid fa-magnifying-glass pe-1"></i>
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="intro__extra shadow">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 intro__extra-left">
+                  <h2 class="h3">
+                    Welcome to our
+                    <span class="d-block">online learning center.</span>
+                  </h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit asperiores minima ut quod? Possimus sint hic
+                    obcaecati, beata nostrum ntatibus. Tempore assumenda ea.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquid magnam repudiandae eum, maiores maxime minima.
+                  </p>
+                </div>
+
+                <div class="col-lg-4 intro__extra-right">
+                  <div class="intro__extra-info">
+                    <i class="fa-solid fa-code"></i>
+                    <div>
+                      <h4 class="h5">Development</h4>
+                      <span>15 courses</span>
+                    </div>
+                  </div>
+                  <div class="intro__extra-info">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    <div>
+                      <h4 class="h5">Design</h4>
+                      <span>20 courses</span>
+                    </div>
+                  </div>
+                  <div class="intro__extra-info">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <div>
+                      <h4 class="h5">Marketing</h4>
+                      <span>10 courses</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Intro End -->
+
+      <!-- Teachers Start -->
+      <!-- <section class="teachers">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem">
+                <img
+                  class="card-img-top"
+                  src="./images/teachers/Joaquin-Phoenix-01.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">Joaquin Phoenix</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem">
+                <img
+                  class="card-img-top"
+                  src="./images/teachers/christoph-waltz-02.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">christoph waltz</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem">
+                <img
+                  class="card-img-top"
+                  src="./images/teachers/Leonardo-DiCaprio-01.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">Leonardo DiCaprio</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem">
+                <img
+                  class="card-img-top"
+                  src="./images/teachers/christian-bale-02.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">christian bale</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- Teachers End -->
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+// The default font family
+$font-family-base: "Lato";
+
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+
+$primary: #fe1949;
+$min-contrast-ratio: 3.5;
+
+// Theme Colors
+$theme-colors: (
+  "primary": $primary,
+);
+
+// Bootstrap 5 Source
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
