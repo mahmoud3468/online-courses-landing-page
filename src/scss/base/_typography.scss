@@ -1,4 +1,4 @@
-@use '../bootstrap-custom' as *;
+@use "../bootstrap-custom" as *;
 
 // Josefin Sans Font
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap");
@@ -13,6 +13,7 @@
   color: $black;
   text-transform: uppercase;
   display: inline-block;
+  word-spacing: 1.5px;
 
   &::after,
   &::before {

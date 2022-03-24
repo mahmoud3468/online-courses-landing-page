@@ -1,7 +1,7 @@
-@use '../bootstrap-custom' as *;
+@use "../bootstrap-custom" as *;
 
 .teachers {
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 
   @include media-breakpoint-down(sm) {
     margin-bottom: 5rem;
@@ -16,6 +16,7 @@
       object-fit: cover;
       border-radius: 50%;
       margin: 0 auto;
+      box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem rgb(0 0 0 / 50%);
     }
 
     &-body {
