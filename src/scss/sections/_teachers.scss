@@ -1,0 +1,53 @@
+@use '../bootstrap-custom' as *;
+
+.teachers {
+  margin-bottom: 10rem;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 5rem;
+  }
+
+  &__card {
+    border: none;
+
+    img {
+      width: 13rem;
+      height: 13rem;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    &-body {
+      width: 90%;
+      margin: 0 auto;
+      padding: 1.5rem 0;
+      text-align: center;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 60%;
+        height: 0.5rem;
+        background-color: $primary;
+        position: absolute;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border-radius: 0 0 10px 10px;
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    &-job {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $gray-700;
+      text-transform: capitalize;
+    }
+  }
+}

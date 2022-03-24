@@ -1,12 +1,19 @@
-@use '../custom' as *;
+@use "../bootstrap-custom" as *;
 
 .navbar {
   padding: 0.7rem 0;
   background-color: $white;
 
   &-brand {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
+    text-transform: uppercase;
+
+    small {
+      display: inline-block;
+      text-transform: lowercase;
+      transform: translateY(5px);
+    }
   }
 
   .navbar-toggler {

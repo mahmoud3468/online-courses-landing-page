@@ -1,6 +1,8 @@
-@use "./custom";
+@use "./bootstrap-custom";
 @use "./base/base";
 @use "./base/typography";
 @use "./components/navbar";
 @use "./components/buttons";
-@use "./pages/intro";
+@use "./sections/intro";
+@use './sections/teachers';
+@use './sections/why-us';

@@ -1,3 +1,18 @@
+@use "../bootstrap-custom" as *;
+
 body {
-  height: 3000px;
+  height: 5000px;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(216, 17, 17);
 }

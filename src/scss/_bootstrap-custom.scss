@@ -9,11 +9,20 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
   "Liberation Mono", "Courier New", monospace;
 
 $primary: #fe1949;
+$secondary-color: #020c28;
 $min-contrast-ratio: 3.5;
 
 // Theme Colors
 $theme-colors: (
   "primary": $primary,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1024px,
+  xxl: 1040px,
 );
 
 // Bootstrap 5 Source

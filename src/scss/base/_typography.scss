@@ -1,10 +1,37 @@
+@use '../bootstrap-custom' as *;
+
 // Josefin Sans Font
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap");
 
 // Lato Font
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
-// Poppins Font
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+.secondary-heading {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $black;
+  text-transform: uppercase;
+  display: inline-block;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap");
+  &::after,
+  &::before {
+    content: "";
+    height: 0.2rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: $gray-800;
+    border-radius: 10rem;
+  }
+
+  &::after {
+    bottom: -0.5rem;
+    width: 5rem;
+  }
+
+  &::before {
+    bottom: -1rem;
+    width: 3rem;
+  }
+}

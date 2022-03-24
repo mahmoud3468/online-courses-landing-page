@@ -1,0 +1,133 @@
+@use '../bootstrap-custom' as *;
+@use '../base/animations' as *;
+
+.why-us {
+  background-color: $secondary-color;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    width: 50%;
+    padding-left: 10%;
+
+    .secondary-heading {
+      color: $white;
+
+      &::before,
+      &::after {
+        background-color: $white;
+        transform: translate(0);
+        left: 0;
+      }
+    }
+
+    p {
+      color: $white;
+      max-width: 30rem;
+    }
+
+    a {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+  }
+
+  &__image {
+    width: 50%;
+    min-height: 33rem;
+    position: relative;
+    background-image: url(../images/why-us-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      right: 40%;
+      transform: translate(50%, -50%);
+      width: 4rem;
+      height: 4rem;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 50%;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #fff;
+        animation: pulse 1s ease-out infinite;
+        z-index: -1;
+      }
+
+      &::before {
+        animation-delay: 0.7s;
+      }
+
+      &::after {
+        animation-delay: 1s;
+      }
+
+      i {
+        color: #f00;
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .why-us {
+    &__wrapper {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__content {
+      width: 100%;
+      padding: 2.5rem;
+    }
+
+    &__image {
+      width: 100%;
+      min-height: 25rem;
+      clip-path: none;
+    }
+
+    p {
+      max-width: 80%;
+    }
+
+    .play-btn {
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .why-us {
+      &__content {
+        padding: 1rem;
+      }
+
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+}

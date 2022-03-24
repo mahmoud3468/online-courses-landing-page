@@ -1,16 +1,22 @@
-@use "../custom" as *;
+@use "../bootstrap-custom" as *;
 
 .intro {
+  position: relative;
   min-height: 40rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url(../images/intro-bg-1.jpg);
+    url(../images/intro-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: $white;
+  margin-bottom: 17rem;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 35rem;
+  }
 
   &__content {
     transform: translateY(-3rem);
@@ -51,18 +57,45 @@
   &__extra {
     width: 65%;
     position: absolute;
-    bottom: -3%;
+    bottom: 0%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 40%);
     padding: 2rem;
     background-color: $white;
     color: $black;
     border-radius: 1rem;
     text-align: left;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+
+    &::after {
+      content: "";
+      width: 50%;
+      height: 0.5rem;
+      background-color: $primary;
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-radius: 0 0 10px 10px;
+    }
 
     @include media-breakpoint-down(xl) {
       width: 80%;
       bottom: -8%;
+    }
+
+    @include media-breakpoint-down(lg) {
+      bottom: 0;
+      width: 100%;
+      border-radius: 0;
+      transform: translate(-50%, 75%);
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: none;
+
+      &::after {
+        display: none;
+      }
     }
 
     &-left {
@@ -72,6 +105,22 @@
 
     &-right {
       padding-left: 3rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+      &-left {
+        padding: 0.5rem;
+        border-right: none;
+        margin-bottom: 1rem;
+      }
+
+      &-right {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 0.5rem;
+      }
     }
 
     h2 {
@@ -90,9 +139,28 @@
     &-info {
       display: flex;
       align-items: center;
+      text-align: left;
 
       &:not(:last-child) {
         margin-bottom: 1rem;
+      }
+
+      @include media-breakpoint-down(lg) {
+        width: 20rem;
+        padding: 2rem 0;
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+        justify-content: center;
+
+        &:not(:last-child) {
+          margin-bottom: 0rem;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 15rem;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 23rem;
       }
 
       i {
