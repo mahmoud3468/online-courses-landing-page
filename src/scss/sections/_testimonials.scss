@@ -1,0 +1,89 @@
+@use "../bootstrap-custom" as *;
+
+.testimonials {
+  position: relative;
+  margin-bottom: 8rem;
+
+  @include media-breakpoint-down(lg) {
+    & .lg-hide {
+      display: none;
+    }
+  }
+
+  .testimonial {
+    padding: 1rem 0.5rem;
+    box-shadow: 0 0 2rem 0.1rem rgba(0, 0, 0, 0.2);
+    user-select: none;
+
+    &__info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $primary;
+
+      &-img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid $primary;
+        padding: 2px;
+      }
+
+      &-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $gray-900;
+        text-transform: capitalize;
+        margin-bottom: 0;
+      }
+
+      &-job {
+        text-transform: capitalize;
+        font-weight: 500;
+      }
+    }
+
+    &__content {
+      i {
+        color: $gray-700;
+      }
+    }
+
+    &__rate {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      i {
+        color: $primary;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 3rem;
+
+    span {
+      width: 1rem;
+      height: 0.3rem;
+      border-radius: 10px;
+      background-color: #fe194bb3;
+      cursor: pointer;
+
+      &.active {
+        width: 2rem;
+        background-color: $primary;
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 @use "../bootstrap-custom" as *;
 
 .courses {
+  margin-bottom: 15rem;
+
   .course {
     position: relative;
     min-height: 15rem;
@@ -96,5 +98,13 @@
         }
       }
     }
+  }
+
+  .load-more-btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 6rem;
+    padding: 0.5rem 2rem;
   }
 }

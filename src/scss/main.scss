@@ -3,7 +3,12 @@
 @use "./base/typography";
 @use "./components/navbar";
 @use "./components/buttons";
+@use "./components/social-links";
 @use "./sections/intro";
 @use "./sections/teachers";
 @use "./sections/why-us";
 @use "./sections/courses";
+@use "./sections/states";
+@use "./sections/testimonials";
+@use "./sections/blog";
+@use "./sections/footer";

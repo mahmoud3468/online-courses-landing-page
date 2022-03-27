@@ -1,0 +1,45 @@
+@use "../bootstrap-custom" as *;
+
+.footer {
+  background-color: $secondary-color;
+  padding-top: 2.5rem;
+  color: $white;
+
+  &__logo {
+    text-transform: uppercase;
+  }
+
+  &__header {
+    text-transform: capitalize;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .copy-rights {
+    background-color: $primary;
+
+    h5 {
+      margin: 0;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+}
